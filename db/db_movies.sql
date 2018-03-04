@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Feb 23, 2018 at 05:40 PM
+-- Generation Time: Mar 04, 2018 at 05:19 PM
 -- Server version: 5.7.19
 -- PHP Version: 5.6.31
 
@@ -1080,15 +1080,17 @@ CREATE TABLE IF NOT EXISTS `tbl_user` (
   `user_level` varchar(15) DEFAULT NULL,
   `user_ip` varchar(50) NOT NULL DEFAULT 'no',
   `user_prevLogin` varchar(100) DEFAULT NULL,
+  `user_newlogin` varchar(10) NOT NULL,
   PRIMARY KEY (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `tbl_user`
 --
 
-INSERT INTO `tbl_user` (`user_id`, `user_fname`, `user_name`, `user_pass`, `user_email`, `user_date`, `user_level`, `user_ip`, `user_prevLogin`) VALUES
-(1, 'Jordan', 'jordanwood', 'fanshawe', 'jordan@gmail.com', '2018-02-14 01:00:12', NULL, '::1', '2018-02-23 12:21:26');
+INSERT INTO `tbl_user` (`user_id`, `user_fname`, `user_name`, `user_pass`, `user_email`, `user_date`, `user_level`, `user_ip`, `user_prevLogin`, `user_newlogin`) VALUES
+(1, 'Jordan', 'jordanwood', 'fanshawe', 'jordan@gmail.com', '2018-02-14 01:00:12', NULL, '::1', '2018-03-02 03:25:08', 'old'),
+(3, 'ryan', 'ryanw', 'ryan', 'ryan@gmail.com', '2018-02-28 23:41:53', NULL, '::1', NULL, '');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
